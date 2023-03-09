@@ -67,7 +67,7 @@ resource "yandex_compute_instance" "novoselovdy-adcm-terraform" {
   }
 
   metadata = {
-    ssh-keys = "dennis:${file("~/.ssh/id_ed25519.pub")}"
+    ssh-keys = "dennis:${file("~/.ssh/id_rsa.pub")}"
   }
 }
 
