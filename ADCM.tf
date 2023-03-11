@@ -72,6 +72,6 @@ resource "yandex_compute_instance" "novoselovdy-adcm-terraform" {
   }
 
   metadata = {
-    ssh-keys = "dennis:${file("~/.ssh/id_rsa.pub")}"
+    user-data = "${file("meta.txt")}"
   }
 }
