@@ -1,3 +1,7 @@
+variable "token" {
+     type = string
+ }
+
 variable "image-id" {
      type = string
  }
@@ -35,6 +39,7 @@ terraform {
  }
 
  provider "yandex" {
+   token     = var.token
    cloud_id  = var.cloud_id
    folder_id = var.folder_id
    zone      = var.zone
@@ -70,4 +75,3 @@ resource "yandex_compute_instance" "novoselovdy-adcm-terraform" {
     ssh-keys = "dennis:${file("~/.ssh/id_rsa.pub")}"
   }
 }
-
