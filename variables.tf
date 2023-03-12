@@ -1,31 +1,31 @@
 variable "token" {
-     type = string
- }
+  type = string
+}
 
 variable "image-id" {
-     type = string
- }
+  type = string
+}
 
 variable "cloud_id" {
-     type = string
- }
+  type = string
+}
 
 variable "folder_id" {
-     type = string
- }
+  type = string
+}
 
 variable "subnet_id" {
-     type = string
- }
+  type = string
+}
 
 variable "image_folder" {
-     type = string
- }
+  type = string
+}
 
 variable "zone" {
-     type = string
- }
+  type = string
+}
 
 variable "platform_id" {
-     type = string
- }
+  type = string
+}

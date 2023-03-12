@@ -1,22 +1,22 @@
 terraform {
-   required_providers {
-     yandex = {
-       source = "yandex-cloud/yandex"
-     }
-   }
- }
+  required_providers {
+    yandex = {
+      source = "yandex-cloud/yandex"
+    }
+  }
+}
 
- provider "yandex" {
-   token     = var.token
-   cloud_id  = var.cloud_id
-   folder_id = var.folder_id
-   zone      = var.zone
- }
+provider "yandex" {
+  token     = var.token
+  cloud_id  = var.cloud_id
+  folder_id = var.folder_id
+  zone      = var.zone
+}
 
 resource "yandex_compute_instance" "novoselovdy-adcm-terraform" {
-  name        = "novoselovdy-adcm-terraform"
-  platform_id = var.platform_id
-  zone        = var.zone
+  name                      = "novoselovdy-adcm-terraform"
+  platform_id               = var.platform_id
+  zone                      = var.zone
   allow_stopping_for_update = true
 
   resources {
