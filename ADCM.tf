@@ -36,7 +36,6 @@ resource "yandex_compute_instance" "novoselovdy-adcm-terraform" {
 
   network_interface {
     subnet_id = var.subnet_id
-    nat       = true
   }
 
   metadata = {
@@ -48,6 +47,3 @@ output "internal_ip_address_novoselovdy-adcm-terraform" {
   value = yandex_compute_instance.novoselovdy-adcm-terraform.network_interface.0.ip_address
 }
 
-output "external_ip_address_novoselovdy-adcm-terraform" {
-  value = yandex_compute_instance.novoselovdy-adcm-terraform.network_interface.0.nat_ip_address
-}
